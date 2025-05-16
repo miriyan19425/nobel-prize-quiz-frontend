@@ -1,11 +1,12 @@
 import NavBar from '../components/NavBar';
+import Header from '../components/Header';
 
 function Home() {
 	return ( 
-    <header>
-			<NavBar />
-			<h1>Nobel Prize Quizes</h1>	
-		</header>
+        <>
+		<NavBar />
+		<Header />	
+	</>
 	);	
 }
 
