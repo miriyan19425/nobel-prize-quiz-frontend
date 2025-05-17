@@ -8,81 +8,68 @@ html {
 	font-size: 62.5%;
 }
 
-h1{
-	position: absolute;
-    top: 50%;
-	left: 20%; 
-	font-size: 10rem;
-	color:  lavender;	
-}
-
-.query {
-	background-color: blue;
-	margin: 2rem;
-	padding: 2rem;
-	border-radius: 5px;
-	display: flex; 
-	justify-content: space-between;
-	align-items: center;
-}
-
-.navbar {
-	height: 15vh;
-	width: 100vw;
-	background-color: grey;
-	display: flex;
-	justify-content: space-between;
-}
-
-header{
+main {
 	height: 85vh;
-	width: 100vw;
 	background-image:  url('./assets/ceremony.jpg');
 	background-size: cover;
-	background-position: center; 
-	 
+	background-position: center;
+	position: relative;
+	filter: brightness(60%);
 }
 
-.home{
+h1 {
+	color: white;
+	font-size: 10rem;
+	top: 40%;
+	left: 20%;
+	position: absolute;
+}
+
+header {
+	height: 15vh;
+	background-color: grey;
+	display: flex;
+	justify-content: space-between;	 
+}
+
+.ul-home-create {
+	margin: 4rem;
+	width: 16vw;
+	list-style: none;
 	display: flex;
 	justify-content: space-between;
+}
+
+.ul-categories {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
 	align-items: center;
 }
 
-.home-link, .new-query-form-link {
+.button-categories {
 	margin: 2rem;
 	padding: 2rem;
-	font-size: 2rem;
-	background-color: blue;
-	color: white;
+	font-size: 1.5rem;
+	border-radius: 6px;
+}
+
+.li-categories {
+	background-color: white;
+	padding: 2rem;
+	border-style: solid; 
+	width: 13rem;
+	z-index: 1;/*z-index only works on positioned elements and flex elements*/
+}
+
+.link-home-create {
 	text-decoration: none;
-	border-radius: 5px;
-} 
-
-.categories-button {
-	margin: 2rem;
-	padding: 2rem;
+	color: white;
 	font-size: 2rem;
-	background-color: blue;
-	color: white;
-	border-style: none;
-	border-radius: 5px;
 }
 
-.dropdown {
-	list-style-type: none;
-}
-
-.physics-link, .chemistry-link, .medicine-link, .literature-link, .peace-link, .economics-link {
-	color: white;
+.link-categories {
+	color: darkolivegreen;
 	text-decoration: none;
-	
-}
-
-.dropdown-item {
-	margin: 2rem;
-	padding: 2rem;
-	font-size: 2rem;
-	background-color: royalblue;
-	border-radius: 5px;
+	font-size: 1.5rem;	
 }
