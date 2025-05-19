@@ -1,0 +1,39 @@
+.newMain {
+	height: 85vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.newForm {
+	height: 75vh;
+    width: 50vw;
+	background-color: tomato;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.formElements {
+	margin-left: 4rem;
+}
+
+.newTitle, .newLabel, .newButton {
+	font-weight: bold;
+	font-size: 1.5rem;
+	color: white;
+}
+
+.newButton {
+	margin: 1rem;
+	padding: 1rem;
+	background-color: coral;
+}
+
+.newTitle {
+	text-align: center;
+}
+
+.newLabel {
+	margin-bottom: 1rem;
+}
