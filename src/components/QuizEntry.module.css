@@ -1,0 +1,39 @@
+.entry {
+    width: 95vw;
+    margin: 2rem;
+    padding: 3rem;
+    border-radius: 5px;
+    background-color: dodgerblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.question {
+    font-size: 3rem;
+    color: white;
+}
+
+.buttons {
+    margin-top: 2rem;
+}
+
+.answer, .edit, .delete{
+    padding: 0.5rem; 
+    margin: 0.5rem;
+    border-radius: 1rem;
+    color: white;
+}
+
+.answer {
+    background-color: seagreen;
+}
+
+.edit {
+    background-color: goldenrod;
+}
+
+.delete {
+    background-color: darkred;
+}
