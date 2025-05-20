@@ -1,11 +1,11 @@
-import NavBar from '../components/NavBar';
-import Queries from '../components/Queries';
+import Header from '../components/Header';
+import QuizEntries from '../components/QuizEntries';
 
 function Peace(){
 	return (
 	 <>
-		<NavBar />
-		<Queries category='peace' />
+		<Header />
+		<QuizEntries category='peace' />
 	 </>
     );
 }
