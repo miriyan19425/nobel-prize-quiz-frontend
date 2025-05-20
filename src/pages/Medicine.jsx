@@ -1,11 +1,11 @@
-import NavBar from '../components/NavBar';
-import Queries from '../components/Queries';
+import Header from '../components/Header';
+import QuizEntries from '../components/QuizEntries';
 
 function Medicine(){
 	return (
 	 <>
-		<NavBar />
-		<Queries category='medicine' />
+		<Header />
+		<QuizEntries category='medicine' />
 	 </>
     );
 }
