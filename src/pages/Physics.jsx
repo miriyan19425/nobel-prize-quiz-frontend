@@ -1,11 +1,11 @@
-import NavBar from '../components/NavBar';
-import Queries from '../components/Queries';
+import Header from '../components/Header';
+import QuizEntries from '../components/QuizEntries';
 
 function Physics(){
 	return (
 	 <>
-		<NavBar />
-		<Queries category='physics' />
+		<Header />
+		<QuizEntries category='physics' />
 	 </>
     );
 }
