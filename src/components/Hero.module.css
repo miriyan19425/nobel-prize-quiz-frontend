@@ -1,0 +1,17 @@
+.heroSection {
+	height: 85vh;
+	background-image:  url('ceremony.jpg');
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	filter: brightness(60%);
+	z-index: -1;
+}
+
+.title {
+	color: white;
+	font-size: 10rem;
+	top: 40%;
+	left: 20%;
+	position: absolute;
+}
