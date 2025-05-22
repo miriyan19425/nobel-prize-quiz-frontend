@@ -1,0 +1,17 @@
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 35%;
+    padding: 3rem;
+    width: 50rem;
+}
+
+.answer {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.closeButton {
+    padding: 1rem;
+    margin: 1rem;
+}
