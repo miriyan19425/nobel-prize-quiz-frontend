@@ -1,0 +1,50 @@
+.head {
+	height: 15vh;
+	background-color: grey;
+	display: flex;
+	justify-content: space-between;
+	position: sticky;
+	top: 0;	 
+}
+
+.ulHomeCreate {
+	margin: 4rem;
+	width: 16vw;
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+}
+
+.ulCategories {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.buttonCategories {
+	margin: 2rem;
+	padding: 2rem;
+	font-size: 1.5rem;
+	border-radius: 6px;
+}
+
+.liCategories {
+	background-color: white;
+	padding: 2rem;
+	border-style: solid; 
+	width: 13rem;
+	z-index: 100;/*z-index only works on positioned elements and flex elements*/
+}
+
+.linkHomeCreate {
+	text-decoration: none;
+	color: white;
+	font-size: 2rem;
+}
+
+.linkCategories {
+	color: darkolivegreen;
+	text-decoration: none;
+	font-size: 1.5rem;	
+}
