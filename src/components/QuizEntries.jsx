@@ -4,7 +4,7 @@ import ModalAnswer from './ModalAnswer';
 import ModalEdit from './ModalEdit';
 //import {nobelPrizeQuiz} from '../data.js';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
-import { read, del, updateQuizAnswer } from '../util/http.js';
+import { read, del, update } from '../util/http.js';
 
 function QuizEntries({category}){
 	const [answer, setAnswer] = useState('');
@@ -33,7 +33,7 @@ function QuizEntries({category}){
 	function updateAnswer(e){ setAnswer(e.target.value); }
 	async function handleUpdate() {
      const updatedData = { answer }; // Ensure `quizEntryId` refers to the correct quiz entry
-     await updateQuizAnswer(updatedData, quizEntryId);
+     await update(updatedData, quizEntryId);
      queryClient.invalidateQueries([{ category }]); // Refresh data from the backend
     }
 
