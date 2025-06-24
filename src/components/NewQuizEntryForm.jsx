@@ -1,9 +1,20 @@
 import styles from './NewQuizEntryForm.module.css';
+import { create } from '../util/http.js';
 
 function NewQuizEntryForm(){
+
+    async function handleSubmit(e) {
+        e.preventDefault();
+
+        const fd = new FormData(e.target);
+        const data = Object.fromEntries(fd.entries());
+
+        create(data);
+    }
+
     return (
         <main className={styles.newMain}>
-            <form className={styles.newForm}> 
+            <form className={styles.newForm} onSubmit={handleSubmit}> 
                 <h2 className={styles.newTitle}>ADD NEW QUERY</h2>
                 <section className={styles.formElements}>
                     <label className={styles.newLabel} htmlFor="category">Category:</label><br/>
