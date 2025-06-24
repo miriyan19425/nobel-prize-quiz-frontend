@@ -4,7 +4,7 @@ import ModalAnswer from './ModalAnswer';
 import ModalEdit from './ModalEdit';
 //import {nobelPrizeQuiz} from '../data.js';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
-import { read, deleteQuizEntry, updateQuizAnswer } from '../util/http.js';
+import { read, del, updateQuizAnswer } from '../util/http.js';
 
 function QuizEntries({category}){
 	const [answer, setAnswer] = useState('');
@@ -24,7 +24,7 @@ function QuizEntries({category}){
 		setEditOpen(true);
 	}
 	async function deleteEntry({_id}) { 
-        await deleteQuizEntry(_id);
+        await del(_id);
         queryClient.invalidateQueries([{ category }]);
     }
 
