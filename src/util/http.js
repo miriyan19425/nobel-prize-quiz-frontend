@@ -1,4 +1,4 @@
-export async function createNewQuizEntry(data) {
+export async function create(data) {
 
     const response = await fetch(`http://localhost:3000/quiz`, {
             method: 'POST',
@@ -28,7 +28,7 @@ export async function updateQuizAnswer(data, id) {
     return response.json();   
 }
 
-export async function deleteQuizEntry(id) {
+export async function del(id) {
   await fetch(`http://localhost:3000/quiz/${id}`, {method: 'DELETE'});
 
   //return response.json();
