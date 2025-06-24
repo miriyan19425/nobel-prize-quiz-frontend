@@ -17,7 +17,7 @@ export async function read(cat) {
   	return data;
 }
 
-export async function updateQuizAnswer(data, id) {
+export async function update(data, id) {
 
     const response = await fetch(`http://localhost:3000/quiz/${id}`, {
             method: 'PATCH',
