@@ -16,7 +16,7 @@ function QuizEntries({category}){
 	if (isPending) return 'Loading...'
   	if (error) return 'An error has occurred: ' + error.message
 
-	function showAnswer(ans){ setAnswer(ans); }
+	function showAnsWindow(ans){ setAnswer(ans); }
 	function showEditForm(ent){
 		console.log(ent);
 		setQuizEntryId(ent._id);
@@ -45,7 +45,7 @@ function QuizEntries({category}){
          		{data.filter((qu) => qu.category === category)
 		 						.map((entry) => <li key={entry.id}>
 												<QuizEntry question={entry.question} 
-														handleAnswer={() => showAnswer(entry.answer)} 
+														showAnsWindow={() => showAnsWindow(entry.answer)} 
 														handleEdit={() => showEditForm(entry)}
 														handleDelete={() => deleteEntry(entry)} /></li>)}
         	</ul>
