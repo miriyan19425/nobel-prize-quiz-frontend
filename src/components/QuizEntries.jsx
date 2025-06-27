@@ -9,7 +9,7 @@ import { read, del, update } from '../util/http.js';
 function QuizEntries({category}){
 	const [answer, setAnswer] = useState('');
 	const [editOpen, setEditOpen] = useState(false);
-	const [quizEntryId, setQuizEntryId] = useState(null);
+	const [entryId, setEntryId] = useState(null);
 
 	const queryClient = useQueryClient();
 	const { data, isPending, error } = useQuery({ queryKey: [{category}], queryFn:  () => read(category) });
@@ -19,7 +19,7 @@ function QuizEntries({category}){
 	function showAnsWindow(ans){ setAnswer(ans); }
 	function showEditForm(ent){
 		console.log(ent);
-		setQuizEntryId(ent._id);
+		setEntryId(ent._id);
 		setAnswer(ent.answer);
 		setEditOpen(true);
 	}
@@ -32,8 +32,8 @@ function QuizEntries({category}){
 	function closeModalEdit(){ setEditOpen(false); }
 	function updateAnswer(e){ setAnswer(e.target.value); }
 	async function handleUpdate() {
-     const updatedData = { answer }; // Ensure `quizEntryId` refers to the correct quiz entry
-     await update(updatedData, quizEntryId);
+     const updatedData = { answer }; // Ensure `entryId` refers to the correct quiz entry
+     await update(updatedData, entryId);
      queryClient.invalidateQueries([{ category }]); // Refresh data from the backend
     }
 
