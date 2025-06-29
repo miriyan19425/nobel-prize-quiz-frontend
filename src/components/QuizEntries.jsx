@@ -39,15 +39,15 @@ function QuizEntries({category}){
 
 	return (
 		<>
-			{editOpen && <ModalEdit inpVal={answer} changeInput={updateAnswer} handleUpdate={handleUpdate} handleClose={closeModalEdit}/>}
-			{answer && <ModalAnswer answer={answer} handleClose={closeModalAnswer}/>}
+			{editOpen && <ModalEdit val={answer} changeAnswer={changeAnswer} updateEntry={updateEntry} hideEditWindow={hideEditWindow}/>}
+			{answer && <ModalAnswer answer={answer} hideAnsWindow={hideAnsWindow}/>}
 			<ul>
          		{data.filter((qu) => qu.category === category)
 		 						.map((entry) => <li key={entry.id}>
 												<QuizEntry question={entry.question} 
 														showAnsWindow={() => showAnsWindow(entry.answer)} 
-														handleEdit={() => showEditForm(entry)}
-														handleDelete={() => deleteEntry(entry)} /></li>)}
+														showEditWindow={() => showEditWindow(entry)}
+														delEntry={() => delEntry(entry)} /></li>)}
         	</ul>
 		</>
 		
