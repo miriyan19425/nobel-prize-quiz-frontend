@@ -40,7 +40,7 @@ function QuizEntries({category}){
 	return (
 		<>
 			{editOpen && <ModalEdit val={answer} changeAnswer={changeAnswer} updateEntry={updateEntry} hideEditWindow={hideEditWindow}/>}
-			{answer && <ModalAnswer answer={answer} hideAnsWindow={hideAnsWindow}/>}
+			{answer && <ModalAnswer key={answer} answer={answer} hideAnsWindow={hideAnsWindow}/>}
 			<ul>
          		{data.filter((qu) => qu.category === category)
 		 						.map((entry) => <li key={entry.id}>
