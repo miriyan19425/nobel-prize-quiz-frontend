@@ -12,7 +12,7 @@ function QuizEntries({category}){
 	const [entryId, setEntryId] = useState(null);
 
 	const queryClient = useQueryClient();
-	const { data, isPending, error } = useQuery({ queryKey: [{category}], queryFn:  () => read(category) });
+	const { data, isPending, error } = useQuery({ queryKey: [ 'quiz', category ], queryFn:  () => read(category) });
 	if (isPending) return 'Loading...'
   	if (error) return 'An error has occurred: ' + error.message
 
@@ -25,7 +25,7 @@ function QuizEntries({category}){
 	}
 	async function deleteEntry({_id}) { 
         await del(_id);
-        queryClient.invalidateQueries([{ category }]);
+        queryClient.invalidateQueries([ 'quiz' ]);
     }
 
 	function closeModalAnswer(){ setAnswer(''); }
@@ -34,7 +34,7 @@ function QuizEntries({category}){
 	async function handleUpdate() {
      const updatedData = { answer }; // Ensure `entryId` refers to the correct quiz entry
      await update(updatedData, entryId);
-     queryClient.invalidateQueries([{ category }]); // Refresh data from the backend
+     queryClient.invalidateQueries([ 'quiz' ]); // Refresh data from the backend
     }
 
 	return (
