@@ -44,11 +44,11 @@ const router = createBrowserRouter([
   },
 ]);
 
-const queryClient = new QueryClient();
+const client = new QueryClient();
 
 function App() {
   return (
-    <QueryClientProvider client={queryClient}>
+    <QueryClientProvider client={client}>
       <RouterProvider router={router} />
     </QueryClientProvider>
   );
